@@ -15,27 +15,29 @@ using System.Windows.Shapes;
 
 namespace Viotech
 {
-    
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for welcome.xaml
+    /// </summary>
+    public partial class welcome : Page
     {
-        public MainWindow()
+        private Frame _frame;
+
+        public welcome()
         {
             InitializeComponent();
-            InitUI();
         }
 
-        private void InitUI()
+        private void doctor_btn_click(object sender, RoutedEventArgs e)
         {
-            // if there is account on this computer
-            // show Login page
-            var welcome = new welcome();
-            welcome.setframe = container;
-            container.Navigate(welcome);
+            _frame.Navigate(new Dashboard());
         }
 
-        private void windows_closing(object sender, System.ComponentModel.CancelEventArgs e)
+        public Frame setframe
         {
-            // tell the storage class to save its user to disk.
+            set
+            {
+                this._frame = value;
+            }
         }
     }
 }

@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Viotech
+{
+    class User
+    {
+        private string _username;
+        private string _password;
+       public string Username
+        {
+            set
+            {
+                this._username = value;
+            }
+            get
+            {
+                return this._username;
+            }
+        }
+        public string Password
+        {
+            set
+            {
+                this._password = value;
+            }
+
+            get
+            {
+                return this._password;
+            }
+        }
+    }
+}

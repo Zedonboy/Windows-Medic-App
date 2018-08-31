@@ -15,27 +15,25 @@ using System.Windows.Shapes;
 
 namespace Viotech
 {
-    
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for userInputs.xaml
+    /// </summary>
+    public partial class userInputs : Page
     {
-        public MainWindow()
+        public userInputs()
         {
             InitializeComponent();
-            InitUI();
         }
 
-        private void InitUI()
+        private void sign_in_btn_click(object sender, RoutedEventArgs e)
         {
-            // if there is account on this computer
-            // show Login page
-            var welcome = new welcome();
-            welcome.setframe = container;
-            container.Navigate(welcome);
+            // get user the user data, hash the password
+            // save it in the filesystem
         }
 
-        private void windows_closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void btn_close_clicked(object sender, RoutedEventArgs e)
         {
-            // tell the storage class to save its user to disk.
+
         }
     }
 }
